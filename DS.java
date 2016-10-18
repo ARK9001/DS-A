@@ -47,13 +47,22 @@ class DSA
         DSA test = new DSA();
         //String[] ppl = new String[3];
         //Integer[] age = new Integer[10];
-        String[] ppl = {"Bruce", "Shane", "Aibar"};
+        String[] ppl = {"Amy", "Adam", "Apple"};
         Integer[] age = {22, 21, 23};
         
         HashMap<String, Integer> nameAge = test.nameAgeMap(ppl, age);
         for (String s: nameAge.keySet()){
             System.out.println("Key : " + s + "      Value: " + nameAge.get(s));
         }
+        
+        HashMap<String, Integer> nameAge2 = test.nameAgeMap(ppl, age);
+        nameAge2.put("Adam",1);
+        for (String s: nameAge2.keySet()){
+            System.out.println("Key : " + s + "      Value: " + nameAge2.get(s));
+        }
+        
+        System.out.println("Hashmaps are equal: " + (nameAge.equals(nameAge2)));
+        
         ArrayList<String> tkdArrLst = test.strArrToArrLst(ppl);
         for (String s: tkdArrLst){
             System.out.println(" Array List element is: " + s);
