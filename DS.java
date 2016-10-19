@@ -30,7 +30,7 @@ class DSA
         HashMap<Character, Integer> charHM = new HashMap<Character, Integer>();
         for (int i = 0; i <s.length(); i++){
             if (charHM.containsKey(s.charAt(i))) {
-                return false;
+                return false;   
             }
             else{
                 charHM.put(new Character(s.charAt(i)), i);
